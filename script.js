@@ -26,13 +26,12 @@ function searchMeal(e) {
             <h3 class="meal_info_color" >${meal.strMeal}</h3>
             </div>
             </div>`
-            )
-            .join("");
+            ).join("");
         }
       });
     search.value = "";
   } else {
-    alert("Please enter a search term");
+    alert("Please enter a search Food");
   }
 }
 function getMealById(mealID) {
@@ -48,7 +47,7 @@ function addMealToDOM(meal) {
   for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`]) {
       ingredients.push(
-        `${meal[`strIngredient${i}`]}-${meal[`strMeasure${i}`]}`
+        `${meal[`strIngredient${i}`]}---${meal[`strMeasure${i}`]}`
       );
     } else {
       break;
@@ -59,7 +58,6 @@ function addMealToDOM(meal) {
     <h1>${meal.strMeal}</h1>
     <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/> 
     <div class="main">
-       
         <h2>Ingredients</h2>
         <ul>
             ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
