@@ -52,7 +52,6 @@ input[type="text"] {
   width: 180px;
   text-align: center;
   display: grid;
-  
 }
 .meal img {
   width: 100%;
@@ -73,13 +72,12 @@ input[type="text"] {
   transition: opacity 0.2s ease-in;
   opacity: 0;
 }
-
 .meal:hover .meal-info {
   opacity: 1;
 }
 .meal_info_color{
   color: #ffffff;
-  font-size: 30px;
+  font-size: 20px;
 }
 .single-meal {
   margin: 30px auto;
